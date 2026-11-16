@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>World Explorer | 世界旅遊探索指南</title>
+
+    <meta name="description" content="探索世界各國文化、景點、美食與旅遊攻略，開啟你的世界冒險。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                🌍 World Explorer
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home">首頁</a>
+                <a href="#about">關於我們</a>
+                <a href="#countries">探索國家</a>
+                <a href="#attractions">熱門景點</a>
+                <a href="#food">特色美食</a>
+                <a href="#planner">行程規劃</a>
+                <a href="favorites.html">我的收藏</a>
+            </nav>
+
+            <a href="#countries" class="nav-button">
+                開始探索 →
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- 首頁主視覺 -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    ✈ YOUR JOURNEY STARTS HERE
+                </span>
+
+                <h1>
+                    探索世界，<br>
+                    發現旅行的<span>美好。</span>
+                </h1>
+
+                <p>
+                    從繁華城市到自然秘境，從異國美食到文化體驗，
+                    帶你探索世界每一個令人心動的角落。
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#countries" class="primary-button">
+                        探索目的地 →
+                    </a>
+
+                    <a href="#about" class="secondary-button">
+                        認識我們
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div>
+                        <strong>195+</strong>
+                        <span>世界國家</span>
+                    </div>
+
+                    <div>
+                        <strong>1000+</strong>
+                        <span>旅遊靈感</span>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <span>探索可能</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-decoration">
+                <div class="globe">🌍</div>
+                <div class="floating-card card-one">
+                    🇯🇵 Japan
+                </div>
+                <div class="floating-card card-two">
+                    🇫🇷 France
+                </div>
+                <div class="floating-card card-three">
+                    🇮🇹 Italy
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- 關於我們 -->
+        <section class="about section" id="about">
+
+            <div class="section-heading">
+                <span>ABOUT WORLD EXPLORER</span>
+                <h2>讓旅行，成為生活的一部分。</h2>
+                <p>
+                    世界很大，值得我們親自去看看。
+                    World Explorer 希望透過旅遊資訊，
+                    幫助每個人找到屬於自己的旅行目的地。
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- 探索國家 -->
+        <section class="countries section" id="countries">
+
+            <div class="section-title">
+                <div>
+                    <span>EXPLORE COUNTRIES</span>
+                    <h2>探索世界各國</h2>
+                    <p>選擇一個國家，開啟你的下一段旅程。</p>
+                </div>
+            </div>
+
+            <div class="country-tools" aria-label="國家搜尋與篩選">
+                <label class="sr-only" for="country-search">搜尋國家</label>
+                <input id="country-search" type="search" placeholder="搜尋國家名稱…" autocomplete="off">
+                <label class="sr-only" for="continent-filter">洲別篩選</label>
+                <select id="continent-filter"><option value="all">所有洲別</option><option value="asia">亞洲 Asia</option><option value="europe">歐洲 Europe</option><option value="north-america">北美洲 North America</option></select>
+                <a class="text-link" href="favorites.html">♡ 查看我的收藏</a>
+            </div>
+            <p id="country-empty" class="empty-state" hidden>找不到符合條件的國家，請調整搜尋或篩選。</p>
+            <div class="country-grid" id="country-grid">
+
+                <a href="countries/japan.html" data-country="日本 Japan" data-continent="asia" class="country-card">
+                    <div class="country-icon">🇯🇵</div>
+                    <span>ASIA</span>
+                    <h3>日本 Japan</h3>
+                    <p>感受櫻花、古都文化與現代城市的魅力。</p>
+                    <span class="card-link">探索更多 →</span>
+                </a>
+
+                <a href="countries/france.html" class="country-card" data-country="法國 France" data-continent="europe">
+                    <div class="country-icon">🇫🇷</div>
+                    <span>EUROPE</span>
+                    <h3>法國 France</h3>
+                    <p>漫遊浪漫巴黎，體驗藝術與時尚文化。</p>
+                    <span class="card-link">探索更多 →</span>
+                </a>
+
+                <a href="countries/italy.html" class="country-card" data-country="義大利 Italy" data-continent="europe">
+                    <div class="country-icon">🇮🇹</div>
+                    <span>EUROPE</span>
+                    <h3>義大利 Italy</h3>
+                    <p>欣賞古羅馬建築，品嚐道地義式料理。</p>
+                    <span class="card-link">探索更多 →</span>
+                </a>
+
+                <a href="countries/switzerland.html" class="country-card" data-country="瑞士 Switzerland" data-continent="europe">
+                    <div class="country-icon">🇨🇭</div>
+                    <span>EUROPE</span>
+                    <h3>瑞士 Switzerland</h3>
+                    <p>走進阿爾卑斯山，享受壯麗自然風景。</p>
+                    <span class="card-link">探索更多 →</span>
+                </a>
+                <a href="countries/south-korea.html" class="country-card" data-country="韓國 South Korea" data-continent="asia"><div class="country-icon">🇰🇷</div><span>ASIA</span><h3>韓國 South Korea</h3><p>探索首爾潮流、古宮文化與釜山海岸風光。</p><span class="card-link">探索更多 →</span></a>
+                <a href="countries/taiwan.html" class="country-card" data-country="台灣 Taiwan" data-continent="asia"><div class="country-icon">🇹🇼</div><span>ASIA</span><h3>台灣 Taiwan</h3><p>從山海景色到夜市小吃，感受島嶼日常。</p><span class="card-link">探索更多 →</span></a>
+                <a href="countries/usa.html" class="country-card" data-country="美國 United States" data-continent="north-america"><div class="country-icon">🇺🇸</div><span>NORTH AMERICA</span><h3>美國 United States</h3><p>體驗多元城市、國家公園與遼闊公路風景。</p><span class="card-link">探索更多 →</span></a>
+                <a href="countries/united-kingdom.html" class="country-card" data-country="英國 United Kingdom" data-continent="europe"><div class="country-icon">🇬🇧</div><span>EUROPE</span><h3>英國 United Kingdom</h3><p>走訪歷史街區、博物館與英倫鄉村。</p><span class="card-link">探索更多 →</span></a>
+
+            </div>
+
+        </section>
+
+
+        <!-- 熱門景點 -->
+        <section class="attractions section" id="attractions">
+
+            <div class="section-heading">
+                <span>POPULAR ATTRACTIONS</span>
+                <h2>世界熱門景點</h2>
+                <p>那些值得放進人生旅行清單的地方。</p>
+            </div>
+
+            <div class="attraction-grid">
+                <article class="attraction-card" data-favorite-type="景點"><div class="attraction-icon">🗼</div><h3>艾菲爾鐵塔</h3><p>法國・巴黎</p><button class="favorite-button" type="button" aria-pressed="false">♡ 收藏景點</button></article>
+                <article class="attraction-card" data-favorite-type="景點"><div class="attraction-icon">🏯</div><h3>清水寺</h3><p>日本・京都</p><button class="favorite-button" type="button" aria-pressed="false">♡ 收藏景點</button></article>
+                <article class="attraction-card" data-favorite-type="景點"><div class="attraction-icon">🏛️</div><h3>羅馬競技場</h3><p>義大利・羅馬</p><button class="favorite-button" type="button" aria-pressed="false">♡ 收藏景點</button></article>
+                <article class="attraction-card" data-favorite-type="景點"><div class="attraction-icon">🏔️</div><h3>馬特洪峰</h3><p>瑞士・策馬特</p><button class="favorite-button" type="button" aria-pressed="false">♡ 收藏景點</button></article>
+            </div>
+
+        </section>
+
+
+                <!-- 特色美食 -->
+        <section class="food section" id="food">
+
+            <div class="section-heading">
+                <span>WORLD FOOD</span>
+                <h2>用美食認識世界</h2>
+                <p>旅行不只有風景，更有令人難忘的味道。</p>
+            </div>
+
+            <div class="food-grid">
+
+                <div class="food-card">
+                    <span>🍣</span>
+                    <h3>壽司</h3>
+                    <p>日本 Japan</p>
+                </div>
+
+                <div class="food-card">
+                    <span>🥐</span>
+                    <h3>可頌</h3>
+                    <p>法國 France</p>
+                </div>
+
+                <div class="food-card">
+                    <span>🍕</span>
+                    <h3>披薩</h3>
+                    <p>義大利 Italy</p>
+                </div>
+
+                <div class="food-card">
+                    <span>🧀</span>
+                    <h3>起司料理</h3>
+                    <p>瑞士 Switzerland</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 行程規劃器 -->
+        <section class="section planner" id="planner">
+            <div class="section-heading"><span>TRIP PLANNER</span><h2>規劃我的旅遊行程</h2><p>輸入目的地與日期，建立自己的旅行清單（資料會保存在此瀏覽器）。</p></div>
+            <form id="planner-form" class="planner-form">
+                <label>目的地<input name="destination" required placeholder="例如：日本・東京"></label>
+                <label>出發日期<input name="date" type="date" required></label>
+                <label>行程備註<input name="note" placeholder="例如：安排兩天市區探索"></label>
+                <button class="primary-button" type="submit">＋ 新增行程</button>
+            </form>
+            <ul id="itinerary-list" class="itinerary-list" aria-live="polite"></ul>
+        </section>
+
+        <!-- 旅遊攻略 -->
+        <section class="travel-tips section" id="tips">
+
+            <div class="tips-content">
+                <span>TRAVEL TIPS</span>
+                <h2>出發前，做好旅行準備。</h2>
+                <p>
+                    了解當地文化、交通方式、氣候與旅遊注意事項，
+                    讓每一次旅行都更加順利。
+                </p>
+
+                <ul>
+                    <li>✈️ 確認護照及簽證資訊</li>
+                    <li>🌤️ 查詢目的地天氣與適合季節</li>
+                    <li>💰 預先規劃旅遊預算</li>
+                    <li>🗺️ 安排交通與旅遊路線</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+
+        <a href="#home" class="footer-logo">
+            🌍 World Explorer
+        </a>
+
+        <p>
+            Explore the World, Discover Yourself.
+        </p>
+
+        <p class="copyright">
+            © 2026 World Explorer. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

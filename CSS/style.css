@@ -1,0 +1,759 @@
+
+/* =================================
+   World Explorer
+   Global Styles
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #FAF9F6;
+  color: #233247;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+
+/* =================================
+ Navbar 導覽列
+================================= */
+
+.navbar {
+  width: 100%;
+  height: 76px;
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #EAECEF;
+  backdrop-filter: blur(12px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  color: #173B63;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #536273;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #3689C9;
+}
+
+.nav-button {
+  background: #173B63;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  background: #3689C9;
+  transform: translateY(-2px);
+}
+
+
+/* =================================
+ Hero 首頁主視覺
+================================= */
+
+.hero {
+  min-height: 620px;
+  padding: 90px 10%;
+  background:
+      radial-gradient(circle at 85% 20%, #DDECF5 0%, transparent 35%),
+      linear-gradient(135deg, #F5F3ED, #EAF2F7);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-tag {
+  display: inline-block;
+  color: #3689C9;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.35;
+  font-weight: 800;
+  color: #173B63;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #3689C9;
+}
+
+.hero-content > p {
+  color: #687789;
+  font-size: 16px;
+  line-height: 2;
+  max-width: 500px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  padding: 13px 27px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.primary-button {
+  background: #173B63;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #3689C9;
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  border: 1px solid #B8C6D2;
+  color: #173B63;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.secondary-button:hover {
+  background: white;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 55px;
+  margin-top: 65px;
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stats strong {
+  color: #173B63;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.hero-stats span {
+  color: #8190A0;
+  font-size: 12px;
+}
+
+
+/* =================================
+ Hero 裝飾元素
+================================= */
+
+.hero-decoration {
+  width: 380px;
+  height: 380px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globe {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+      145deg,
+      #FFFFFF,
+      #D8EAF5
+  );
+
+  box-shadow:
+      20px 25px 60px rgba(35, 67, 96, 0.13),
+      inset -10px -10px 30px rgba(90, 150, 190, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 145px;
+}
+
+.floating-card {
+  position: absolute;
+  padding: 12px 20px;
+  border-radius: 15px;
+  background: white;
+  color: #173B63;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-one {
+  top: 35px;
+  left: 0;
+}
+
+.card-two {
+  right: -10px;
+  top: 130px;
+  animation-delay: 0.5s;
+}
+
+.card-three {
+  bottom: 30px;
+  left: 40px;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-12px);
+  }
+}
+
+
+/* =================================
+ 共用 Section
+================================= */
+
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 25px;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.section-heading > span,
+.section-title span,
+.tips-content > span {
+  color: #3689C9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-heading h2,
+.section-title h2,
+.tips-content h2 {
+  color: #173B63;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.section-heading p,
+.section-title p {
+  color: #7B8794;
+  font-size: 14px;
+}
+
+
+/* =================================
+ About 關於我們
+================================= */
+
+.about {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+
+/* =================================
+ Countries 探索國家
+================================= */
+
+.countries {
+  max-width: none;
+  padding-left: max(25px, calc((100% - 1150px) / 2));
+  padding-right: max(25px, calc((100% - 1150px) / 2));
+  background: #F0F4F6;
+}
+
+.section-title {
+  margin-bottom: 40px;
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.country-card {
+  background: white;
+  border-radius: 18px;
+  padding: 30px 25px;
+  border: 1px solid #E9EEF1;
+  transition: 0.3s;
+}
+
+.country-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(23, 59, 99, 0.09);
+}
+
+.country-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.country-card > span {
+  color: #7CA5C5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.country-card h3 {
+  font-size: 20px;
+  color: #173B63;
+  margin: 8px 0;
+}
+
+.country-card p {
+  color: #8793A0;
+  font-size: 13px;
+  min-height: 50px;
+}
+
+.country-card a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #3689C9;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =================================
+ Attractions 熱門景點
+================================= */
+
+.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.attraction-card {
+  padding: 40px 20px;
+  background: white;
+  border: 1px solid #EAECEF;
+  border-radius: 18px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.attraction-card:hover {
+  transform: translateY(-6px);
+  background: #F1F7FB;
+}
+
+.attraction-icon {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.attraction-card h3 {
+  color: #173B63;
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.attraction-card p {
+  color: #8995A2;
+  font-size: 13px;
+}
+
+
+/* =================================
+ Food 特色美食
+================================= */
+
+.food {
+  max-width: none;
+  background: #F0F4F6;
+  padding-left: max(25px, calc((100% - 1150px) / 2));
+  padding-right: max(25px, calc((100% - 1150px) / 2));
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 18px;
+  padding: 35px 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.food-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(23, 59, 99, 0.08);
+}
+
+.food-card span {
+  font-size: 50px;
+}
+
+.food-card h3 {
+  color: #173B63;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.food-card p {
+  color: #8995A2;
+  font-size: 13px;
+}
+
+
+/* =================================
+ Travel Tips 旅遊攻略
+================================= */
+
+.travel-tips {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.tips-content {
+  background: linear-gradient(
+      135deg,
+      #173B63,
+      #326C9C
+  );
+
+  color: white;
+  padding: 60px;
+  border-radius: 25px;
+}
+
+.tips-content > span {
+  color: #B8D9F1;
+}
+
+.tips-content h2 {
+  color: white;
+  margin: 15px 0;
+}
+
+.tips-content > p {
+  color: #D4E3EF;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.tips-content ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.tips-content li {
+  color: white;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+/* =================================
+ Footer 頁尾
+================================= */
+
+.footer {
+  background: #122C46;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer-logo {
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.footer > p {
+  color: #B6C7D6;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.footer .copyright {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 11px;
+}
+
+
+/* =================================
+ RWD 響應式設計
+================================= */
+
+@media (max-width: 1000px) {
+
+  .hero {
+      padding: 80px 6%;
+  }
+
+  .hero-decoration {
+      transform: scale(0.8);
+  }
+
+  .country-grid,
+  .attraction-grid,
+  .food-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+      gap: 15px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+      height: auto;
+  }
+
+  .nav-container {
+      padding: 18px 20px;
+      flex-wrap: wrap;
+      gap: 15px;
+  }
+
+  .nav-links {
+      width: 100%;
+      order: 3;
+      overflow-x: auto;
+      padding: 8px 0;
+  }
+
+  .nav-links a {
+      white-space: nowrap;
+      font-size: 12px;
+  }
+
+  .nav-button {
+      font-size: 11px;
+      padding: 8px 13px;
+  }
+
+  .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 75px 25px;
+  }
+
+  .hero-content {
+      width: 100%;
+  }
+
+  .hero-content > p {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .hero-buttons,
+  .hero-stats {
+      justify-content: center;
+  }
+
+  .hero-stats {
+      gap: 30px;
+  }
+
+  .hero-decoration {
+      margin-top: 35px;
+      transform: scale(0.75);
+      height: 300px;
+  }
+
+  .section {
+      padding: 75px 20px;
+  }
+
+  .section-heading h2,
+  .section-title h2,
+  .tips-content h2 {
+      font-size: 25px;
+  }
+
+  .tips-content {
+      padding: 35px 25px;
+  }
+
+  .tips-content ul {
+      grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .logo {
+      font-size: 19px;
+  }
+
+  .hero h1 {
+      font-size: 38px;
+  }
+
+  .hero-stats {
+      gap: 20px;
+  }
+
+  .hero-stats strong {
+      font-size: 21px;
+  }
+
+  .country-grid,
+  .attraction-grid,
+  .food-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .hero-decoration {
+      transform: scale(0.65);
+      margin: 0;
+  }
+
+  .hero-buttons a {
+      width: 100%;
+  }
+
+}
+
+.country-card {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.country-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(23, 59, 99, 0.12);
+}
+
+.country-card .card-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #3689C9;
+    font-size: 13px;
+    font-weight: 700;
+}
+/* 國家介紹頁：置中行動按鈕 */
+.centered-buttons {
+    justify-content: center;
+}
+
+
+/* Interactive explorer: search, filters, favorites and planner */
+.country-tools { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin:0 0 24px; }
+.country-tools input, .country-tools select, .planner-form input { min-height:44px; border:1px solid #D6E0E8; border-radius:12px; padding:10px 14px; background:#fff; color:#233247; font:inherit; }
+.country-tools input { flex:1 1 240px; }
+.country-tools select { flex:0 1 190px; }
+.text-link,.card-link { color:#3689C9; font-weight:700; font-size:13px; }
+.country-card[hidden] { display:none !important; }
+.favorite-button { display:inline-flex; align-items:center; justify-content:center; margin-top:14px; padding:8px 13px; border:1px solid #D7E4ED; border-radius:22px; background:#F5FAFD; color:#245D87; font:inherit; font-size:12px; font-weight:700; cursor:pointer; }
+.favorite-button[aria-pressed="true"] { color:#B44D64; background:#FFF2F4; border-color:#F1CDD5; }
+.attraction-card .favorite-button { margin-top:16px; }
+.empty-state { color:#718096; text-align:center; padding:20px; }
+.planner { max-width:100%; background:#F0F4F6; padding-left:max(25px, calc((100% - 1150px) / 2)); padding-right:max(25px, calc((100% - 1150px) / 2)); }
+.planner-form { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)) auto; gap:14px; align-items:end; }
+.planner-form label { display:grid; gap:7px; color:#536273; font-size:13px; font-weight:700; }
+.planner-form button { border:0; cursor:pointer; white-space:nowrap; }
+.itinerary-list { list-style:none; margin-top:22px; display:grid; gap:10px; }
+.itinerary-list li { display:flex; justify-content:space-between; gap:15px; align-items:center; background:white; border:1px solid #E2E9EE; border-radius:12px; padding:13px 16px; }
+.itinerary-list button { border:0; background:transparent; color:#B44D64; cursor:pointer; font:inherit; }
+.back-to-top { position:fixed; right:24px; bottom:24px; z-index:1200; width:46px; height:46px; border:0; border-radius:50%; background:#173B63; color:white; font-size:24px; box-shadow:0 8px 24px #173b6333; cursor:pointer; opacity:0; pointer-events:none; transform:translateY(10px); transition:.25s; }
+.back-to-top.visible { opacity:1; pointer-events:auto; transform:translateY(0); }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media(max-width:900px) { .planner-form { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .planner-form { grid-template-columns:1fr; } .country-tools>* { width:100%; } .itinerary-list li { align-items:flex-start; } }
